@@ -1,91 +1,99 @@
-# MainBot 🤖
+![Discord Bot Banner](public/discord-bot-1240w.jpeg)
 
-A simple Discord bot with fun utility commands. Great for learning Python backend development!
+# MainBot
+
+A simple yet feature-rich Discord bot with utility commands. Perfect for learning Python backend development and Discord.py integration!
 
 ## Features
 
-- **`/ping`** - Check if the bot is online (responds with latency)
-- **`/roll`** - Roll a dice (default: d6, or specify: `/roll 20` for d20)
-- **`/flip`** - Flip a coin (Heads or Tails)
-- **`/choose`** - Pick one random option (example: `/choose pizza, tacos, sushi`)
-- **`/poll`** - Create a poll with emoji reactions (example: `/poll "Favorite pizza?" pepperoni, margherita, hawaiian`)
+- **`/ping`** — Check if the bot is online and measure response latency
+- **`/roll`** — Roll a dice with customizable sides (default: d6, or specify: `/roll 20` for d20)
+- **`/flip`** — Flip a coin to get Heads or Tails
+- **`/choose`** — Pick one random option from a list (example: `/choose pizza, tacos, sushi`)
+- **`/poll`** — Create interactive polls with emoji reactions (example: `/poll "Favorite pizza?" pepperoni, margherita, hawaiian`)
 
-## Quick Setup
+## Setup and Installation
 
 ### Prerequisites
-- Python 3.8+
-- Discord bot token (create at [Discord Developer Portal](https://discord.com/developers/applications))
+- Python 3.8 or higher
+- A Discord bot token (obtain one by creating an application at the [Discord Developer Portal](https://discord.com/developers/applications))
 
-### 1. Clone/Navigate to project
+### Installation Steps
+
+**Step 1: Navigate to the project directory**
 ```bash
 cd /path/to/dbot
 ```
 
-### 2. Create virtual environment
+**Step 2: Create and activate a virtual environment**
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
+**Step 3: Install required dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Set up your bot token
-Copy the example and add your token:
+**Step 4: Configure your bot token**
+
+First, copy the example environment file:
 ```bash
 cp .env.example .env
 ```
 
-Edit `.env` and replace the placeholder with your Discord bot token:
+Then edit the `.env` file and replace the placeholder with your actual Discord bot token:
 ```
 DISCORD_TOKEN=your_actual_token_here
 ```
 
-### 5. Run the bot
+**Step 5: Start the bot**
 ```bash
 python3 bot.py
 ```
 
-You should see:
+Upon successful startup, you should see confirmation messages:
 ```
-✓ Bot logged in as MainBot#XXXX
-✓ Synced X command(s)
+Bot logged in as MainBot#XXXX
+Synced X command(s)
 ```
 
 ## Inviting the Bot to Your Server
 
-1. Go to [Discord Developer Portal](https://discord.com/developers/applications)
-2. Select your bot application
-3. Go to **OAuth2** → **URL Generator**
-4. Select scopes: `bot`
-5. Select permissions: `Send Messages`, `Use Slash Commands`, `Add Reactions`
-6. Copy the generated URL and open it in your browser
-7. Select your server and authorize
+1. Open the [Discord Developer Portal](https://discord.com/developers/applications)
+2. Select your bot application from the list
+3. Navigate to **OAuth2** and then **URL Generator**
+4. Under Scopes, select: `bot`
+5. Under Permissions, select:
+   - `Send Messages`
+   - `Use Slash Commands`
+   - `Add Reactions`
+6. Copy the generated URL from the bottom of the page
+7. Paste the URL into your browser and authorize the bot on your desired server
 
-## Usage Examples
+## Command Usage Examples
 
-In your Discord server:
+Try the following commands in your Discord server to see the bot in action:
 
 ```
 /ping
-→ Pong! 🏓 (42ms)
+→ Response: Pong! (42ms)
 
 /roll
-→ 🎲 You rolled a **4** on a d6
+→ Response: You rolled a **4** on a d6
 
 /roll 20
-→ 🎲 You rolled a **17** on a d20
+→ Response: You rolled a **17** on a d20
 
 /flip
-→ 🪙 **Heads**!
+→ Response: **Heads**!
 
 /choose pizza, tacos, sushi
-→ 🎯 I choose: **tacos**
+→ Response: I choose: **tacos**
 
 /poll "Best color?" red, blue, green
-→ Creates a poll with emoji reactions (1️⃣, 2️⃣, 3️⃣)
+→ Creates an interactive poll with numbered reactions
 ```
 
 ## Project Structure
