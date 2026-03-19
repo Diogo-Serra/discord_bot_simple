@@ -1,6 +1,6 @@
 ![Discord Bot Banner](public/discord-bot-1240w.jpeg)
 
-# MainBot
+# Simple bot - Discord
 
 A simple yet feature-rich Discord bot with utility commands. Perfect for learning Python backend development and Discord.py integration!
 
